@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "font1";
+    src: url(/fonts/Inter-ExtraBold.ttf);
+}
+@font-face {
+    font-family: "font2";
+    src: url(/fonts/Merriweather-Light.ttf);
+}
+
+$bold : "font1", sans-serif;
+$light : "font2", sans-serif;
+$color1 : rgb(248, 248, 248);
+$color2 : rgb(150, 150, 150);
+$color3 : rgb(17, 17, 17);
+
+*{
+    margin : 0;
+}
+
+body {
+    background: url(/images/bg.jpg) fixed center/cover;
+}
+
+p {
+    font-family: $light;
+    font-size: 0.7rem;
+}
+h1,h2,h3{
+    font-family: $bold;
+    text-transform: uppercase;
+}
+button {
+    background: none;
+    text-transform: uppercase;
+    border : 2px solid black;
+    font-weight: bold;
+    padding : 7px 20px;
+    font-size: 0.7rem;
+    transition: 0.3s ease;
+}
+button:hover{
+    background: $color3;
+    color: $color1;
+    border : 2px solid $color1;
+    cursor: pointer;
+}
+
+li{
+    list-style: none;
+}
+
+.top,.bottom, footer{
+    background: $color1;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
