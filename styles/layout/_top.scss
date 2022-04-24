@@ -4,7 +4,8 @@
     border-bottom: 1px solid rgba(128, 128, 128, 0.281) ;
 
     .containeur_top {
-        padding: 40px 70px 70px;
+        width: 80%;
+        padding: 40px 0px 70px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -67,10 +68,13 @@
         }
 
         .top_img{
-            background: url(images/pic01.jpg) center/cover;
-            height: 500px;
             width: 100%;
             margin-bottom: 40px;
+
+            img {
+                width: 100%;
+                
+            }
 
             @media screen and (max-width: 500px) {
                 height: 200px ;

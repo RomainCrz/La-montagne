@@ -1,11 +1,11 @@
 @font-face {
   font-family: "font1";
-  src: url(fonts/Inter-ExtraBold.ttf);
+  src: url(../fonts/Inter-ExtraBold.ttf);
 }
 
 @font-face {
   font-family: "font2";
-  src: url(fonts/Merriweather-Light.ttf);
+  src: url(../fonts/Merriweather-Light.ttf);
 }
 
 * {
@@ -13,7 +13,7 @@
 }
 
 body {
-  background: url(images/bg.jpg) fixed center/cover;
+  background: url(../images/bg.jpg) fixed center/cover;
 }
 
 p {
@@ -29,8 +29,8 @@ h1, h2, h3 {
 button {
   background: none;
   text-transform: uppercase;
-  border: 2px solid black;
-  font-weight: bold;
+  border: 1px solid black;
+  font-family: "font1", sans-serif;
   padding: 7px 20px;
   font-size: 0.7rem;
   -webkit-transition: 0.3s ease;
@@ -40,7 +40,7 @@ button {
 button:hover {
   background: #111111;
   color: #f8f8f8;
-  border: 2px solid #f8f8f8;
+  border: 1px solid #f8f8f8;
   cursor: pointer;
 }
 
@@ -281,7 +281,8 @@ header nav .nav_right li:hover {
 }
 
 .top .containeur_top {
-  padding: 40px 70px 70px;
+  width: 80%;
+  padding: 40px 0px 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -360,10 +361,12 @@ header nav .nav_right li:hover {
 }
 
 .top .containeur_top .top_img {
-  background: url(images/pic01.jpg) center/cover;
-  height: 500px;
   width: 100%;
   margin-bottom: 40px;
+}
+
+.top .containeur_top .top_img img {
+  width: 100%;
 }
 
 @media screen and (max-width: 500px) {
@@ -410,17 +413,19 @@ header nav .nav_right li:hover {
 
 @media screen and (max-width: 750px) {
   .containeur_bottom .bottom_case {
-    width: 100%;
+    width: 80%;
+    padding: 0px 0px 50px;
   }
 }
 
 .containeur_bottom .bottom_case .date {
+  margin-top: 40px;
   margin-bottom: 20px;
 }
 
 .containeur_bottom .bottom_case h3 {
   letter-spacing: 2px;
-  width: 60%;
+  width: 80%;
   margin-bottom: 20px;
   height: 70px;
 }
@@ -428,39 +433,29 @@ header nav .nav_right li:hover {
 @media screen and (max-width: 750px) {
   .containeur_bottom .bottom_case h3 {
     width: 70%;
+    height: 100%;
   }
 }
 
 .containeur_bottom .bottom_case .img_bottom {
   width: 100%;
-  height: 250px;
   margin-bottom: 25px;
+  margin-top: 10px;
 }
 
-@media screen and (max-width: 750px) {
-  .containeur_bottom .bottom_case .img_bottom {
-    width: 70%;
-    height: 150px;
-  }
+.containeur_bottom .bottom_case .img_bottom img {
+  width: 100%;
 }
 
-.containeur_bottom .bottom_case #img_bottom_left {
-  background: url(images/pic02.jpg) center/cover;
-}
-
-.containeur_bottom .bottom_case #img_bottom_right {
-  background: url(images/pic03.jpg) center/cover;
-}
-
-.containeur_bottom .bottom_case p {
+.containeur_bottom .bottom_case .description {
   text-align: left;
   line-height: 25px;
-  margin-bottom: 25px;
-  height: 100px;
+  margin-bottom: 30px;
+  height: 150px;
 }
 
 @media screen and (max-width: 750px) {
-  .containeur_bottom .bottom_case p {
+  .containeur_bottom .bottom_case .description {
     text-align: left;
     padding: 0 15%;
   }
@@ -470,9 +465,24 @@ header nav .nav_right li:hover {
   border-right: 1px solid rgba(128, 128, 128, 0.281);
 }
 
+@media screen and (max-width: 750px) {
+  .containeur_bottom #bottom_left {
+    border-right: none;
+  }
+}
+
+.containeur_bottom button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
 @media screen and (min-width: 750px) {
   .containeur_bottom button {
-    margin-top: 20px;
+    margin-top: 15px;
   }
 }
 
